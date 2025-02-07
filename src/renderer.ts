@@ -36,7 +36,7 @@ export const createDateRangePickerRenderer: DateRangePickerRendererCreator = ({
       /*
        * `renderOptions` contains all options passed by the connector to the renderer, it contains everything needed for the rendering of the component
        */
-console.log(renderOptions);
+
       if (isFirstRender) {
 
         /*
