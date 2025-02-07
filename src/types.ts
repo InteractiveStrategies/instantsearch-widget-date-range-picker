@@ -21,7 +21,7 @@ export type DateRangePickerRenderState = {
 };
 
 type DateRangePickerWidgetDescription = {
-  $$type: 'algolia.date-range-picker';
+  $$type: 'algolia.dateRangePicker';
   renderState: DateRangePickerRenderState;
   indexRenderState: {
     dateRangePicker: {
@@ -61,7 +61,7 @@ export type DateRangePickerRendererCreator = (
  */
 export type DateRangePickerWidgetCreator = WidgetFactory<
   DateRangePickerWidgetDescription & {
-    $$widgetType: 'algolia.date-range-picker';
+    $$widgetType: 'algolia.dateRangePicker';
   },
   DateRangePickerConnectorParams,
   DateRangePickerWidgetParams
