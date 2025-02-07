@@ -30,6 +30,6 @@ export const dateRangePicker: DateRangePickerWidgetCreator = function DateRangeP
 
   return {
     ...createWidget(connectorParams),
-    $$widgetType: 'algolia.date-range-picker',
+    $$widgetType: 'algolia.dateRangePicker',
   };
 };
