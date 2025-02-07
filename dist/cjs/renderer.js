@@ -30,7 +30,7 @@ var createDateRangePickerRenderer = exports.createDateRangePickerRenderer = func
       /*
        * `renderOptions` contains all options passed by the connector to the renderer, it contains everything needed for the rendering of the component
        */
-      console.log(renderOptions);
+
       if (isFirstRender) {
         /*
          * When the widget is rendered for the first time `isFirstRender` is set to `true`
