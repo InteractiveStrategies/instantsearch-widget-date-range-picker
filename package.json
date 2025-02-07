@@ -25,7 +25,7 @@
     "start": "parcel example/index.html --port 3000",
     "prebuild": "rm -rf dist",
     "build": "npm run build:umd && npm run build:cjs && npm run build:esm && npm run build:types",
-    "build:umd": "parcel build src/index.ts dateRangePicker --no-source-maps --out-dir dist/umd --out-file index.js",
+    "build:umd": "parcel build src/index.ts --global dateRangePicker --no-source-maps --out-dir dist/umd --out-file index.js",
     "build:cjs": "BABEL_ENV=cjs babel src --extensions '.js,.ts' --out-dir dist/cjs --ignore '**/__tests__' --source-maps && BABEL_ENV=cjs babel src/index.ts --out-file dist/cjs/index.js --source-maps",
     "build:esm": "BABEL_ENV=esm babel src --extensions '.js,.ts' --out-dir dist/esm --ignore '**/__tests__' --source-maps",
     "build:types": "tsc --build tsconfig.declaration.json",
