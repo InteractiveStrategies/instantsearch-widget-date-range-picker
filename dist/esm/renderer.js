@@ -31,7 +31,7 @@ export var createDateRangePickerRenderer = function createDateRangePickerRendere
          * This is when we will create everything that must be reused between renders (containers, event listeners, etc.)
          */
         containerNode.appendChild(root);
-        root.innerHTML = "\n          <duet-date-picker></duet-date-picker>\n          <duet-date-picker></duet-date-picker>\n        ";
+        root.innerHTML = "\n          <div class=\"search-facet-date\">\n            <label for=\"date\">From</label>\n            <duet-date-picker></duet-date-picker>\n          </div>\n          <div class=\"search-facet-date\">\n            <label for=\"date\">To</label>\n            <duet-date-picker></duet-date-picker>\n          </div>\n        ";
         var pickers = root.querySelectorAll('duet-date-picker');
         var beginPicker = pickers[0];
         var endPicker = pickers[1];

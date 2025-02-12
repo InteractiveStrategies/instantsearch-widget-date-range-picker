@@ -46,8 +46,14 @@ export const createDateRangePickerRenderer: DateRangePickerRendererCreator = ({
         containerNode.appendChild(root);
 
         root.innerHTML = `
-          <duet-date-picker></duet-date-picker>
-          <duet-date-picker></duet-date-picker>
+          <div class="search-facet-date">
+            <label for="date">From</label>
+            <duet-date-picker></duet-date-picker>
+          </div>
+          <div class="search-facet-date">
+            <label for="date">To</label>
+            <duet-date-picker></duet-date-picker>
+          </div>
         `;
 
         const pickers = root.querySelectorAll('duet-date-picker');
