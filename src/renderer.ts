@@ -104,6 +104,7 @@ export const createDateRangePickerRenderer: DateRangePickerRendererCreator = ({
           beginValue: string | undefined,
           endValue: string | undefined
         ) => {
+          console.log(beginValue, endValue);
           const min = beginValue ? new Date(beginValue).getTime() : undefined;
           const max = endValue ? new Date(endValue).getTime() : undefined;
           renderOptions.refine([min, max]);
