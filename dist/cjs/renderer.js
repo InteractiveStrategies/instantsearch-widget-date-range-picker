@@ -52,7 +52,11 @@ var createDateRangePickerRenderer = exports.createDateRangePickerRenderer = func
             }
           },
           format: function format(date) {
-            return "".concat(date.getMonth() + 1, "/").concat(date.getDate(), "/").concat(date.getFullYear());
+            return date.toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: '2-digit',
+              day: '2-digit'
+            });
           }
         };
         var localization = {

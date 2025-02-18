@@ -74,7 +74,7 @@ export const createDateRangePickerRenderer: DateRangePickerRendererCreator = ({
             }
           },
           format(date: Date) {
-            return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+            return date.toLocaleDateString('en-US', {year: 'numeric', month: '2-digit', day: '2-digit'});
           },
         };
 
