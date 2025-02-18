@@ -74,7 +74,7 @@ export const createDateRangePickerRenderer: DateRangePickerRendererCreator = ({
             }
           },
           format(date: Date) {
-            return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+            return date.toLocaleDateString('en-US', {year: 'numeric', month: '2-digit', day: '2-digit'});
           },
         };
 
@@ -104,7 +104,6 @@ export const createDateRangePickerRenderer: DateRangePickerRendererCreator = ({
           beginValue: string | undefined,
           endValue: string | undefined
         ) => {
-          console.log(beginValue, endValue);
           const min = beginValue ? new Date(beginValue).getTime() : undefined;
           const max = endValue ? new Date(endValue).getTime() : undefined;
           renderOptions.refine([min, max]);
