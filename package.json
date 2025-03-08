@@ -80,6 +80,7 @@
     "IE 11"
   ],
   "dependencies": {
+    "@duetds/date-picker": "^1.4.0",
     "algoliasearch": "^5.20.1",
     "instantsearch.js": "^4.77.3"
   }
