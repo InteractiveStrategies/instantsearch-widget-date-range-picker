@@ -1,1 +1,1 @@
-{"version":3,"file":"index.js","names":["dateRangePicker","createDateRangePickerRenderer"],"sources":["../../src/index.ts"],"sourcesContent":["export { dateRangePicker } from \"./widget\";\nexport { createDateRangePickerRenderer } from \"./renderer\";\n"],"mappings":"SAASA,eAAe;AAAA,SACfC,6BAA6B","ignoreList":[]}
+{"version":3,"file":"index.js","names":["dateRangePicker"],"sources":["../../src/index.ts"],"sourcesContent":["export { dateRangePicker } from \"./widget\";\n"],"mappings":"SAASA,eAAe","ignoreList":[]}

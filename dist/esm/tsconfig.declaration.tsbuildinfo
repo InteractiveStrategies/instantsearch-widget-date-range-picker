@@ -1,1 +1,1 @@
-{"root":["../../src/index.ts","../../src/renderer.ts","../../src/types.ts","../../src/widget.ts"],"errors":true,"version":"5.7.3"}
+{"root":["../../src/date-range-picker.d.ts","../../src/index.ts","../../src/widget.ts"],"version":"5.7.3"}
