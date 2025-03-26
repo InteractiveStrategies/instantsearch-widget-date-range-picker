@@ -66,8 +66,8 @@ var dateRangePicker = exports.dateRangePicker = function dateRangePicker(widgetP
           endPicker.dateAdapter = dateAdapter;
           endPicker.localization = localization;
           var doRefine = function doRefine(beginValue, endValue) {
-            var min = beginValue ? new Date(beginValue).getTime() : undefined;
-            var max = endValue ? new Date(endValue).getTime() : undefined;
+            var min = beginValue ? new Date(beginValue).getTime() / 1000 : undefined;
+            var max = endValue ? new Date(endValue).getTime() / 1000 : undefined;
             refine([min, max]);
           };
           beginListener = function beginListener(event) {
