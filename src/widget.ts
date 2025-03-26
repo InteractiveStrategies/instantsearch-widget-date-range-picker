@@ -1,9 +1,7 @@
 
 import { connectRange } from 'instantsearch.js/es/connectors';
 import { RangeRenderState } from 'instantsearch.js/es/connectors/range/connectRange';
-import {
-  DateRangePickerWidgetParams,
-} from './date-range-picker';
+import { DateRangePickerWidgetParams } from './date-range-picker';
 
 type DuetChangeListener = (params: { detail: { value: string } }) => void;
 type PickerElement = Element & { value: string, localization: {}, dateAdapter: {} };
@@ -54,43 +52,9 @@ export const dateRangePicker = (
       yearSelectLabel: 'Year',
       closeLabel: 'Close window',
       calendarHeading: 'Choose a date',
-      dayNames: [
-        'Sunday',
-        'Monday',
-        'Tuesday',
-        'Wednesday',
-        'Thursday',
-        'Friday',
-        'Saturday',
-      ],
-      monthNames: [
-        'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
-        'July',
-        'August',
-        'September',
-        'October',
-        'November',
-        'December',
-      ],
-      monthNamesShort: [
-        'Jan',
-        'Feb',
-        'Mar',
-        'Apr',
-        'May',
-        'Jun',
-        'Jul',
-        'Aug',
-        'Sep',
-        'Oct',
-        'Nov',
-        'Dec',
-      ],
+      dayNames: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday',],
+      monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December',],
+      monthNamesShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',],
       locale: 'en-US',
     };
 
