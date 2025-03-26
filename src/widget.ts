@@ -132,8 +132,8 @@ export const dateRangePicker = (
           beginValue: string | undefined,
           endValue: string | undefined
         ) => {
-          const min = beginValue ? new Date(beginValue).getTime() : undefined;
-          const max = endValue ? new Date(endValue).getTime() : undefined;
+          const min = beginValue ? new Date(beginValue).getTime() / 1000 : undefined;
+          const max = endValue ? new Date(endValue).getTime() / 1000 : undefined;
 
           refine([min, max]);
         };
