@@ -1,5 +1,5 @@
 
-import { RangeConnectorParams, RangeWidgetDescription, RangeRenderState } from 'instantsearch.js/es/connectors/range/connectRange';
+import { RangeConnectorParams, RangeRenderState } from 'instantsearch.js/es/connectors/range/connectRange';
 import type { WidgetRenderState } from 'instantsearch.js/es/types';
 
 export type DateRangePickerWidgetParams = {

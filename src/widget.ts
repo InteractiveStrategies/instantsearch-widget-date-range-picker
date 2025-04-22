@@ -1,9 +1,7 @@
 
 import { connectRange } from 'instantsearch.js/es/connectors';
 import { RangeRenderState } from 'instantsearch.js/es/connectors/range/connectRange';
-import {
-  DateRangePickerWidgetParams,
-} from './date-range-picker';
+import { DateRangePickerWidgetParams } from './date-range-picker';
 
 type DuetChangeListener = (params: { detail: { value: string } }) => void;
 type PickerElement = Element & { value: string, localization: {}, dateAdapter: {} };
@@ -54,43 +52,9 @@ export const dateRangePicker = (
       yearSelectLabel: 'Year',
       closeLabel: 'Close window',
       calendarHeading: 'Choose a date',
-      dayNames: [
-        'Sunday',
-        'Monday',
-        'Tuesday',
-        'Wednesday',
-        'Thursday',
-        'Friday',
-        'Saturday',
-      ],
-      monthNames: [
-        'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
-        'July',
-        'August',
-        'September',
-        'October',
-        'November',
-        'December',
-      ],
-      monthNamesShort: [
-        'Jan',
-        'Feb',
-        'Mar',
-        'Apr',
-        'May',
-        'Jun',
-        'Jul',
-        'Aug',
-        'Sep',
-        'Oct',
-        'Nov',
-        'Dec',
-      ],
+      dayNames: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday',],
+      monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December',],
+      monthNamesShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',],
       locale: 'en-US',
     };
 
@@ -110,12 +74,12 @@ export const dateRangePicker = (
 
         root.innerHTML = `
           <div class="search-facet-date">
-            <label for="date">From</label>
-            <duet-date-picker></duet-date-picker>
+            <label for="date1">From</label>
+            <duet-date-picker identifier="date1"></duet-date-picker>
           </div>
           <div class="search-facet-date">
-            <label for="date">To</label>
-            <duet-date-picker></duet-date-picker>
+            <label for="date2">To</label>
+            <duet-date-picker identifier="date2"></duet-date-picker>
           </div>
         `;
 
