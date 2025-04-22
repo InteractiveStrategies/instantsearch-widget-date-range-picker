@@ -74,12 +74,12 @@ export const dateRangePicker = (
 
         root.innerHTML = `
           <div class="search-facet-date">
-            <label for="date">From</label>
-            <duet-date-picker></duet-date-picker>
+            <label for="date1">From</label>
+            <duet-date-picker identifier="date1"></duet-date-picker>
           </div>
           <div class="search-facet-date">
-            <label for="date">To</label>
-            <duet-date-picker></duet-date-picker>
+            <label for="date2">To</label>
+            <duet-date-picker identifier="date2"></duet-date-picker>
           </div>
         `;
 

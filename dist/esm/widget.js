@@ -51,7 +51,7 @@ export var dateRangePicker = function dateRangePicker(widgetParams) {
             return;
           }
           container.appendChild(root);
-          root.innerHTML = "\n          <div class=\"search-facet-date\">\n            <label for=\"date\">From</label>\n            <duet-date-picker></duet-date-picker>\n          </div>\n          <div class=\"search-facet-date\">\n            <label for=\"date\">To</label>\n            <duet-date-picker></duet-date-picker>\n          </div>\n        ";
+          root.innerHTML = "\n          <div class=\"search-facet-date\">\n            <label for=\"date1\">From</label>\n            <duet-date-picker identifier=\"date1\"></duet-date-picker>\n          </div>\n          <div class=\"search-facet-date\">\n            <label for=\"date2\">To</label>\n            <duet-date-picker identifier=\"date2\"></duet-date-picker>\n          </div>\n        ";
           var pickers = root.querySelectorAll('duet-date-picker');
           var beginPicker = pickers[0];
           var endPicker = pickers[1];
