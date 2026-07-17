@@ -37,11 +37,12 @@ module.exports = (api) => {
             }
           ),
           /*
-           * Transform the modules type for the CommonJS build
+           * Transform the modules type for the CommonJS build, and for tests
+           * (Jest runs on CommonJS and can't parse raw ESM import/export).
            * Otherwise keep the ECMAScript modules syntax
            * https://babeljs.io/docs/en/babel-preset-env#modules
            */
-          modules: isCJS ? 'commonjs' : false,
+          modules: isCJS || isTest ? 'commonjs' : false,
         },
       ],
     ],

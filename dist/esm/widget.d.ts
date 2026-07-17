@@ -1,4 +1,4 @@
-import { RangeRenderState } from 'instantsearch.js/es/connectors/range/connectRange';
+import { RangeBoundaries, RangeRenderState } from 'instantsearch.js/es/connectors/range/connectRange';
 import { DateRangePickerWidgetParams } from './date-range-picker';
 export declare const dateRangePicker: (widgetParams: DateRangePickerWidgetParams) => {
     $$widgetType: string;
@@ -242,11 +242,11 @@ export declare const dateRangePicker: (widgetParams: DateRangePickerWidgetParams
         };
     }) => import("algoliasearch-helper").SearchParameters;
     getWidgetRenderState: (renderOptions: import("instantsearch.js/es/types").InitOptions | import("instantsearch.js/es/types").RenderOptions) => {
-        refine: (rangeValue: import("instantsearch.js/es/connectors/range/connectRange").RangeBoundaries) => void;
+        refine: (rangeValue: RangeBoundaries) => void;
         canRefine: boolean;
         sendEvent: import("instantsearch.js/es/lib/utils").SendEventForFacet;
         range: import("instantsearch.js/es/connectors/range/connectRange").Range;
-        start: import("instantsearch.js/es/connectors/range/connectRange").RangeBoundaries;
+        start: RangeBoundaries;
         format: {
             from: (fromValue: number) => string;
             to: (toValue: number) => string;
@@ -653,11 +653,11 @@ export declare const dateRangePicker: (widgetParams: DateRangePickerWidgetParams
         };
     }) => import("algoliasearch-helper").SearchParameters;
     getWidgetRenderState: ((renderOptions: import("instantsearch.js/es/types").InitOptions | import("instantsearch.js/es/types").RenderOptions) => {
-        refine: (rangeValue: import("instantsearch.js/es/connectors/range/connectRange").RangeBoundaries) => void;
+        refine: (rangeValue: RangeBoundaries) => void;
         canRefine: boolean;
         sendEvent: import("instantsearch.js/es/lib/utils").SendEventForFacet;
         range: import("instantsearch.js/es/connectors/range/connectRange").Range;
-        start: import("instantsearch.js/es/connectors/range/connectRange").RangeBoundaries;
+        start: RangeBoundaries;
         format: {
             from: (fromValue: number) => string;
             to: (toValue: number) => string;
@@ -860,11 +860,11 @@ export declare const dateRangePicker: (widgetParams: DateRangePickerWidgetParams
     } & {
         results: import("algoliasearch-helper/types/algoliasearch").RecommendResponse<any>;
     })) => {
-        refine: (rangeValue: import("instantsearch.js/es/connectors/range/connectRange").RangeBoundaries) => void;
+        refine: (rangeValue: RangeBoundaries) => void;
         canRefine: boolean;
         sendEvent: import("instantsearch.js/es/lib/utils").SendEventForFacet;
         range: import("instantsearch.js/es/connectors/range/connectRange").Range;
-        start: import("instantsearch.js/es/connectors/range/connectRange").RangeBoundaries;
+        start: RangeBoundaries;
         format: {
             from: (fromValue: number) => string;
             to: (toValue: number) => string;
