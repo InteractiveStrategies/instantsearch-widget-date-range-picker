@@ -1,1 +1,1 @@
-{"version":3,"file":"index.js","names":["_widget","require"],"sources":["../../src/index.ts"],"sourcesContent":["export { dateRangePicker } from \"./widget\";\n"],"mappings":";;;;;;;;;;;AAAA,IAAAA,OAAA,GAAAC,OAAA","ignoreList":[]}
+{"version":3,"file":"index.js","names":["_widget","require"],"sources":["../../src/index.ts"],"sourcesContent":["export { dateRangePicker, formatEpochSecondsAsDate } from \"./widget\";\n"],"mappings":";;;;;;;;;;;;;;;;;AAAA,IAAAA,OAAA,GAAAC,OAAA","ignoreList":[]}

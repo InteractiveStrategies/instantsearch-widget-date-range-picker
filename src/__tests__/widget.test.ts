@@ -3,7 +3,7 @@
  */
 
 import algoliasearchHelper, { AlgoliaSearchHelper } from 'algoliasearch-helper';
-import { dateRangePicker } from '../widget';
+import { dateRangePicker, formatEpochSecondsAsDate } from '../widget';
 
 const ATTRIBUTE = 'date';
 
@@ -111,5 +111,12 @@ describe('dateRangePicker', () => {
     expect(helper.getNumericRefinement(ATTRIBUTE, '>=')).toEqual([]);
     expect(helper.getNumericRefinement(ATTRIBUTE, '<=')).toEqual([toEpochSeconds('2018-01-01')]);
     expect(beginPicker.value).toBe('');
+  });
+
+  describe('formatEpochSecondsAsDate', () => {
+    it('formats the UTC calendar date regardless of the refinement value stored, matching what the picker round-trips', () => {
+      expect(formatEpochSecondsAsDate(toEpochSeconds('2018-01-01'))).toBe('01/01/2018');
+      expect(formatEpochSecondsAsDate(toEpochSeconds('2018-12-31'))).toBe('12/31/2018');
+    });
   });
 });

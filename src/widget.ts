@@ -6,6 +6,22 @@ import { DateRangePickerWidgetParams } from './date-range-picker';
 type DuetChangeListener = (params: { detail: { value: string } }) => void;
 type PickerElement = Element & { value: string, localization: {}, dateAdapter: {} };
 
+/**
+ * Formats a refinement value (epoch seconds, as stored by this widget's
+ * numeric range refinement) as a human-readable `MM/DD/YYYY` date, using the
+ * UTC calendar date rather than the browser's local timezone — since the
+ * epoch value represents UTC midnight of the picked date. Exposed so
+ * consumers (e.g. a `currentRefinements` widget rendering this attribute's
+ * active-filter pills) don't need to reimplement this conversion.
+ */
+export const formatEpochSecondsAsDate = (epochSeconds: number): string =>
+  new Date(epochSeconds * 1000).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    timeZone: 'UTC',
+  });
+
 export const dateRangePicker = (
   widgetParams: DateRangePickerWidgetParams,
 ) => {

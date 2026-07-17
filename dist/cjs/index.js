@@ -9,6 +9,12 @@ Object.defineProperty(exports, "dateRangePicker", {
     return _widget.dateRangePicker;
   }
 });
+Object.defineProperty(exports, "formatEpochSecondsAsDate", {
+  enumerable: true,
+  get: function get() {
+    return _widget.formatEpochSecondsAsDate;
+  }
+});
 var _widget = require("./widget");
 
 //# sourceMappingURL=index.js.map
