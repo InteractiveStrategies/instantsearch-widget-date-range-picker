@@ -66,6 +66,7 @@
     "eslint-plugin-jsdoc": "^50.6.3",
     "eslint-plugin-prettier": "^5.2.3",
     "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "parcel-bundler": "^1.12.5",
     "prettier": "^3.4.2",
     "standard-version": "^9.5.0",
@@ -83,5 +84,11 @@
     "@duetds/date-picker": "^1.4.0",
     "algoliasearch": "^5.20.1",
     "instantsearch.js": "^4.77.3"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^instantsearch\\.js/es/(.*)$": "instantsearch.js/cjs/$1",
+      "^preact$": "<rootDir>/node_modules/preact/dist/preact.js"
+    }
   }
 }

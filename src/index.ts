@@ -1,1 +1,1 @@
-export { dateRangePicker } from "./widget";
+export { dateRangePicker, formatEpochSecondsAsDate } from "./widget";
